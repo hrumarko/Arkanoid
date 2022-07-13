@@ -18,6 +18,7 @@ public class RightPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
             Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
-            rb.AddForce(PlatformColliders.Direction("right") * Ball.speedBall);
+            rb.AddForce(PlatformColliders.Direction("right") * Ball.speedBall/2);
+            
         }
 }

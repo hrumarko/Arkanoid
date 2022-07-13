@@ -18,7 +18,7 @@ public class PlatformColliders : MonoBehaviour
            float x = Random.Range(-2, 2);
            float y = 1;
            Vector2 pos = new Vector2(x, y);
-           Debug.Log((pos));
+           
            return pos;
            
         }

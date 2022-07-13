@@ -6,7 +6,7 @@ public class Platform : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed;
-    float bounds = 2.20f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +21,23 @@ public class Platform : MonoBehaviour
 
     void Moving(){
         if(Input.GetKey(KeyCode.A)){
+            
             transform.Translate(new Vector2(-1, 0) * Time.deltaTime * speed);
             if(!isMobility()){
-                transform.position = new Vector2(-bounds, this.transform.position.y);
+                transform.position = new Vector2(-0.12f, this.transform.position.y);
             }
         }else if(Input.GetKey(KeyCode.D)){
+            
              transform.Translate(new Vector2(1, 0) * Time.deltaTime * speed);
              if(!isMobility()){
-                transform.position = new Vector2(bounds, this.transform.position.y);
+                transform.position = new Vector2(4.1f, this.transform.position.y);
             }
         }
        
     }
 
     bool isMobility(){
-        if(transform.position.x > bounds || transform.position.x < -bounds){
+        if(transform.position.x > 4.1f || transform.position.x < -0.12f){
             return false;
             
         }
