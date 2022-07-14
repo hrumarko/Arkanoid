@@ -11,10 +11,10 @@ public class Weapon : MonoBehaviour
         
     }
 
-    private void Update() {
-        if(Input.GetKeyDown(KeyCode.Space)){
-            StartCoroutine(Shooting());
-        }
+    public void ShootingCoroutine() {
+        
+        StartCoroutine(Shooting());
+        
     }
 
     public IEnumerator Shooting(){
@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
         
         GameObject patron = Instantiate(bullet, transform.position, Quaternion.identity);
         patron.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 700);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         count++;
         }
             

@@ -8,6 +8,7 @@ TagManager:
   - Lateral
   - Up
   - Platform
+  - AchieveMent
   layers:
   - Default
   - TransparentFX
