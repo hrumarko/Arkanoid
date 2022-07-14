@@ -5,6 +5,8 @@ using UnityEngine;
 public class LongerPlatform : MonoBehaviour
 {
     public GameObject longerObj;
+    public Animation anim;
+    public Animation anim2;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public class LongerPlatform : MonoBehaviour
     private IEnumerator Longest(){
         
         longerObj.SetActive(true);
+        anim.Play("rightAnim");
+        anim2.Play("leftAnim");
         yield return new WaitForSeconds(5);
         longerObj.SetActive(false);
     }
