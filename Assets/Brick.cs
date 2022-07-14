@@ -6,7 +6,7 @@ public class Brick : MonoBehaviour
 {
     int health =2;
     public GameObject effect;
-    public GameObject achieve;
+    public GameObject[] achieves;
     void Start()
     {
         
@@ -26,7 +26,7 @@ public class Brick : MonoBehaviour
             Instantiate(effect, this.transform.position, Quaternion.identity);
             
             if(Random.value<0.1){
-                Instantiate(achieve, transform.position, Quaternion.identity);
+                Instantiate(achieves[Random.Range(0, achieves.Length)], transform.position, Quaternion.identity);
             }
         }
 
