@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         
-        rb.AddForce(new Vector2(1, 1) * speedBall);
+       
         
     }
 

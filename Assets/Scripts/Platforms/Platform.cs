@@ -17,9 +17,7 @@ public class Platform : MonoBehaviour
     void Update()
     {
         Moving();
-        if(Input.GetKeyDown(KeyCode.F)){
-            WeaponOn();
-        }
+        
     }
 
     void Moving(){
@@ -51,7 +49,5 @@ public class Platform : MonoBehaviour
 
     
 
-    void WeaponOn(){
-        StartCoroutine(FindObjectOfType<Weapon>().Shooting());
-    }
+    
 }
